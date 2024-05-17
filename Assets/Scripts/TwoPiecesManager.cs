@@ -29,6 +29,11 @@ public class TwoPiecesManager : MonoBehaviour
     [SerializeField] Sprite blue, cyan, green, orange, purple, red, yellow;
     [SerializeField] Boolean atHome = true;
 
+
+    private void Start()
+    {
+        GetComponent<Transform>().localScale = new Vector3(0.5f,0.5f,0);
+    }
     private void Update()
     {
         if (!atHome)
@@ -170,6 +175,7 @@ public class TwoPiecesManager : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        GetComponent<Transform>().localScale = new Vector3(1f, 1f, 0);
         if (this.gameObject.tag == "Blue")
         {
             color = 1;
@@ -205,10 +211,12 @@ public class TwoPiecesManager : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        
         rayControl = false;
         if (!isOkeyBoth)
         {
             turnBack = true;
+            GetComponent<Transform>().localScale = new Vector3(0.5f, 0.5f, 0);
         }
         if (isOkeyBoth)
         {
