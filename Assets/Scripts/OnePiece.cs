@@ -10,7 +10,7 @@ public class OnePiece : MonoBehaviour
 {
     public Vector3 mousePosition; 
     [SerializeField] Boolean rayControl, turnBack;
-    public float smoothTime = 0.25f;
+    public float smoothTime = 0.1f;
     private Vector3 velocity = Vector3.zero;
     public Vector3 home = new Vector3(0, -3.5f, -4);
     [SerializeField] float distance;
@@ -23,8 +23,18 @@ public class OnePiece : MonoBehaviour
     GameObject a, b;
     int color;
     [SerializeField] Sprite blue,cyan,green,orange,purple,red,yellow;
+    [SerializeField] Boolean atHome = true;
     private void Update()
     {
+        if (!atHome)
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else
+        {
+            GetComponent<BoxCollider2D>().enabled = true;
+        }
+
         if (rayControl)
         {  
             if (Physics.Raycast(transform.position, Vector3.forward, out raycastHit3D, distance, lm))
@@ -78,9 +88,6 @@ public class OnePiece : MonoBehaviour
                     a.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled=false;
                     a = b;                    
                 }
-                {
-                    
-                }
                 
             }
             else
@@ -91,6 +98,7 @@ public class OnePiece : MonoBehaviour
         if (turnBack)
         {
             turnBackHome();
+            rayControl = false;
         }
     }
     private void OnMouseDrag()
@@ -150,10 +158,12 @@ public class OnePiece : MonoBehaviour
         {
             transform.position = Vector3.SmoothDamp(transform.position, home, ref velocity, smoothTime);
             b.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            atHome = false;
         }
         else
         {
             turnBack = false;
+            atHome = true;
         }
     }
 }

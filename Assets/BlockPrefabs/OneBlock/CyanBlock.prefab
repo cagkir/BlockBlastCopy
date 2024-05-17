@@ -116,6 +116,7 @@ MonoBehaviour:
   purple: {fileID: 0}
   red: {fileID: 0}
   yellow: {fileID: 0}
+  atHome: 1
 --- !u!61 &2779023545759666078
 BoxCollider2D:
   m_ObjectHideFlags: 0
