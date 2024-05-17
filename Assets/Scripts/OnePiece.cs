@@ -157,7 +157,10 @@ public class OnePiece : MonoBehaviour
         if (transform.position != home)
         {
             transform.position = Vector3.SmoothDamp(transform.position, home, ref velocity, smoothTime);
-            b.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            if(b != null)
+            {
+                b.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            }   
             atHome = false;
         }
         else
