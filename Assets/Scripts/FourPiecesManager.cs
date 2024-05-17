@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThreePiecesManager : MonoBehaviour
+public class FourPiecesManager : MonoBehaviour
 {
     Vector3 mousePosition;
 
     RaycastHit raycastHitFirst;
     RaycastHit raycastHitSecond;
     RaycastHit raycastHitThird;
+    RaycastHit raycastHitFourth;
 
     float smoothTime = 0.1f;
     Vector3 velocity = Vector3.zero;
@@ -20,12 +21,13 @@ public class ThreePiecesManager : MonoBehaviour
     [SerializeField] Boolean isOkeyFirst;
     [SerializeField] Boolean isOkeySecond;
     [SerializeField] Boolean isOkeyThird;
+    [SerializeField] Boolean isOkeyFourth;
     [SerializeField] Boolean isOkeyAll;
     [SerializeField] public Boolean Thrown;
     [SerializeField] Boolean rayControl, turnBack;
-    [SerializeField] GameObject child1, child2, child3;
+    [SerializeField] GameObject child1, child2, child3, child4;
 
-    GameObject a1, b1, a2, b2, a3, b3;
+    GameObject a1, b1, a2, b2, a3, b3, a4, b4;
     int color;
     [SerializeField] Sprite blue, cyan, green, orange, purple, red, yellow;
     [SerializeField] Boolean atHome = true;
@@ -50,7 +52,7 @@ public class ThreePiecesManager : MonoBehaviour
         {
             if (Physics.Raycast(child1.transform.position, Vector3.forward, out raycastHitFirst, distance, lm))
             {
-                isOkeyFirst = true;
+                isOkeyFirst = true;            
                 b1 = raycastHitFirst.transform.gameObject;
 
                 if (a1 == null)
@@ -126,7 +128,33 @@ public class ThreePiecesManager : MonoBehaviour
 
 
 
-            if (isOkeyFirst && isOkeySecond && isOkeyThird)
+            if (Physics.Raycast(child4.transform.position, Vector3.forward, out raycastHitFourth, distance, lm))
+            {
+                isOkeyFourth = true;
+                b4 = raycastHitFourth.transform.gameObject;
+
+                if (a4 == null)
+                {
+                    a4 = raycastHitFourth.transform.gameObject;
+                }
+                if (a4 == b4)
+                {
+                    //still same object
+                }
+                if (a4 != b4)
+                {
+                    a4.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                    a4 = b4;
+                }
+            }
+            else
+            {
+                isOkeyFourth = false;
+            }
+
+
+
+            if (isOkeyFirst && isOkeySecond && isOkeyThird && isOkeyFourth)
             {
                 isOkeyAll = true;
                 if (color == 1)
@@ -134,51 +162,59 @@ public class ThreePiecesManager : MonoBehaviour
                     raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
                     raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
                     raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
+                    raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
                 }
                 if (color == 2)
                 {
                     raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
                     raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
                     raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
+                    raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
                 }
                 if (color == 3)
                 {
                     raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
                     raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
                     raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
+                    raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
                 }
                 if (color == 4)
                 {
                     raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
                     raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
                     raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
+                    raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
                 }
                 if (color == 5)
                 {
                     raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
                     raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
                     raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
+                    raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
                 }
                 if (color == 6)
                 {
                     raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
                     raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
                     raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
+                    raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
                 }
                 if (color == 7)
                 {
                     raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
                     raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
                     raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
+                    raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
                 }
                 raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                 raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                 raycastHitThird.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                raycastHitFourth.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
             }
             else
             {
                 isOkeyAll = false;
-                if(a1 != null)
+                if (a1 != null)
                 {
                     a1.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                 }
@@ -189,6 +225,10 @@ public class ThreePiecesManager : MonoBehaviour
                 if (a3 != null)
                 {
                     a3.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
+                if (a4 != null)
+                {
+                    a4.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                 }
             }
         }
@@ -249,12 +289,15 @@ public class ThreePiecesManager : MonoBehaviour
             child1.transform.SetParent(raycastHitFirst.collider.gameObject.transform);
             child2.transform.SetParent(raycastHitSecond.collider.gameObject.transform);
             child3.transform.SetParent(raycastHitThird.collider.gameObject.transform);
+            child4.transform.SetParent(raycastHitFourth.collider.gameObject.transform);
             raycastHitFirst.collider.gameObject.layer = 6;
             raycastHitSecond.collider.gameObject.layer = 6;
             raycastHitThird.collider.gameObject.layer = 6;
+            raycastHitFourth.collider.gameObject.layer = 6;
             child1.transform.localPosition = new Vector3(0, 0, -1);
             child2.transform.localPosition = new Vector3(0, 0, -1);
             child3.transform.localPosition = new Vector3(0, 0, -1);
+            child4.transform.localPosition = new Vector3(0, 0, -1);
             Destroy(gameObject.GetComponent<ThreePiecesManager>());
         }
     }
@@ -275,6 +318,10 @@ public class ThreePiecesManager : MonoBehaviour
             if (b3 != null)
             {
                 b3.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            }
+            if (b4 != null)
+            {
+                b4.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
             }
             atHome = false;
         }

@@ -99,6 +99,10 @@ public class OnePiece : MonoBehaviour
             else
             {
                 isOkey = false;
+                if(a != null)
+                {
+                    a.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
         }
         if (turnBack)

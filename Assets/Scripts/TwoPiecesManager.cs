@@ -50,37 +50,6 @@ public class TwoPiecesManager : MonoBehaviour
             if(Physics.Raycast(child1.transform.position, Vector3.forward, out raycastHitFirst, distance, lm))
             {
                 isOkeyFirst = true;
-                if (color == 1)
-                {
-                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
-                }
-                if (color == 2)
-                {
-                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
-                }
-                if (color == 3)
-                {
-                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
-                }
-                if (color == 4)
-                {
-                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
-                }
-                if (color == 5)
-                {
-                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
-                }
-                if (color == 6)
-                {
-                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
-                }
-                if (color == 7)
-                {
-                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
-                }
-
-
-                raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                 b1 = raycastHitFirst.transform.gameObject;
 
                 if (a1 == null)
@@ -102,40 +71,11 @@ public class TwoPiecesManager : MonoBehaviour
                 isOkeyFirst = false;
             }
 
+
+
             if(Physics.Raycast(child2.transform.position, Vector3.forward, out raycastHitSecond, distance, lm))
             {
                 isOkeySecond = true;
-                if (color == 1)
-                {
-                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
-                }
-                if (color == 2)
-                {
-                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
-                }
-                if (color == 3)
-                {
-                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
-                }
-                if (color == 4)
-                {
-                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
-                }
-                if (color == 5)
-                {
-                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
-                }
-                if (color == 6)
-                {
-                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
-                }
-                if (color == 7)
-                {
-                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
-                }
-
-
-                raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                 b2 = raycastHitSecond.transform.gameObject;
 
                 if (a2 == null)
@@ -157,13 +97,60 @@ public class TwoPiecesManager : MonoBehaviour
                 isOkeySecond = false;
             }
 
+
+
             if(isOkeyFirst && isOkeySecond)
             {
                 isOkeyBoth = true;
+                if (color == 1)
+                {
+                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
+                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = blue;
+                }
+                if (color == 2)
+                {
+                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
+                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = cyan;
+                }
+                if (color == 3)
+                {
+                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
+                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = green;
+                }
+                if (color == 4)
+                {
+                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
+                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = orange;
+                }
+                if (color == 5)
+                {
+                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
+                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = purple;
+                }
+                if (color == 6)
+                {
+                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
+                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = red;
+                }
+                if (color == 7)
+                {
+                    raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
+                    raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = yellow;
+                }
+                raycastHitFirst.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                raycastHitSecond.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
             }
             else
             {
                 isOkeyBoth = false;
+                if (a1 != null)
+                {
+                    a1.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
+                if (a2 != null)
+                {
+                    a2.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
         }
         if (turnBack)
