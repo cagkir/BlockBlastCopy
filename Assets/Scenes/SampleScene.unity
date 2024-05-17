@@ -2817,6 +2817,12 @@ MonoBehaviour:
   - {fileID: 2160884079404006385, guid: 045c47e9ef6884743b6d1150174c21c5, type: 3}
   FourPieces:
   - {fileID: 3789067543849631548, guid: 7a43157dec586db4e9b78e0be5dbf585, type: 3}
+  - {fileID: 306987503075415171, guid: fbcd728c8a8b4fc41a2e7718c9d4696d, type: 3}
+  - {fileID: 2985327328558403398, guid: 7a248452286404a4e9d792e03c5839fa, type: 3}
+  - {fileID: 3845519955485182618, guid: ee744b4a4ea61e9419aa8f47df2a3324, type: 3}
+  - {fileID: 8712305081229038779, guid: e7111a44e3b82274795c954600e1e6e4, type: 3}
+  - {fileID: 2745390486575011540, guid: 5ba9d75c2d9e0cb4eb17a267787d714d, type: 3}
+  - {fileID: 5119218737301038686, guid: cd95ca24a6345b54896fa781d14c43a0, type: 3}
   isFirstUsed: 0
   isSecondUsed: 0
   isThirdUsed: 0
