@@ -8,6 +8,7 @@ public class Manager : MonoBehaviour
 
     [SerializeField] GameObject[] OnePieces;
     [SerializeField] GameObject[] TwoPieces;
+    [SerializeField] GameObject[] ThreePieces;
     [SerializeField] Boolean isFirstUsed, isSecondUsed, isThirdUsed;
     [SerializeField] GameObject firstPiece, SecondPiece, ThirdPiece;
     [SerializeField] GameObject firstSpawn, SecondSpawn, ThirdSpawn;
@@ -29,15 +30,15 @@ public class Manager : MonoBehaviour
         else
         {
             
-            if ((WhichSize1 == 0 && !isFirstUsed && firstPiece.GetComponent<OnePiece>().Thrown) || (WhichSize1 == 1 && !isFirstUsed && firstPiece.GetComponent<TwoPiecesManager>().Thrown))
+            if ((WhichSize1 == 0 && !isFirstUsed && firstPiece.GetComponent<OnePiece>().Thrown) || (WhichSize1 == 1 && !isFirstUsed && firstPiece.GetComponent<TwoPiecesManager>().Thrown) || (WhichSize1 == 2 && !isFirstUsed && firstPiece.GetComponent<ThreePiecesManager>().Thrown))
             {
                 isFirstUsed = true;
             }
-            if ((WhichSize2 == 0 && !isSecondUsed && SecondPiece.GetComponent<OnePiece>().Thrown) || (WhichSize2 == 1 && !isSecondUsed && SecondPiece.GetComponent<TwoPiecesManager>().Thrown))
+            if ((WhichSize2 == 0 && !isSecondUsed && SecondPiece.GetComponent<OnePiece>().Thrown) || (WhichSize2 == 1 && !isSecondUsed && SecondPiece.GetComponent<TwoPiecesManager>().Thrown) || (WhichSize2 == 2 && !isSecondUsed && SecondPiece.GetComponent<ThreePiecesManager>().Thrown))
             {
                 isSecondUsed = true;
             }
-            if ((WhichSize3 == 0 && !isThirdUsed && ThirdPiece.GetComponent<OnePiece>().Thrown) || (WhichSize3 == 1 && !isThirdUsed && ThirdPiece.GetComponent<TwoPiecesManager>().Thrown))
+            if ((WhichSize3 == 0 && !isThirdUsed && ThirdPiece.GetComponent<OnePiece>().Thrown) || (WhichSize3 == 1 && !isThirdUsed && ThirdPiece.GetComponent<TwoPiecesManager>().Thrown) || (WhichSize3 == 2 && !isThirdUsed && ThirdPiece.GetComponent<ThreePiecesManager>().Thrown))
             {
                 isThirdUsed = true;
             }
@@ -49,9 +50,9 @@ public class Manager : MonoBehaviour
         isFirstUsed = false;
         isSecondUsed = false;
         isThirdUsed = false;
-        WhichSize1 = UnityEngine.Random.Range(0, 2);
-        WhichSize2 = UnityEngine.Random.Range(0, 2);
-        WhichSize3 = UnityEngine.Random.Range(0, 2);
+        WhichSize1 = UnityEngine.Random.Range(0, 3);
+        WhichSize2 = UnityEngine.Random.Range(0, 3);
+        WhichSize3 = UnityEngine.Random.Range(0, 3);
 
 
         if (WhichSize1 == 0)
@@ -66,6 +67,12 @@ public class Manager : MonoBehaviour
             firstPiece = Instantiate(TwoPieces[OneBlock1], firstSpawn.transform);
             firstPiece.GetComponent<TwoPiecesManager>().home = firstSpawn.transform.position;
         }
+        if (WhichSize1 == 2)
+        {
+            int OneBlock1 = UnityEngine.Random.Range(0, ThreePieces.Length);
+            firstPiece = Instantiate(ThreePieces[OneBlock1], firstSpawn.transform);
+            firstPiece.GetComponent<ThreePiecesManager>().home = firstSpawn.transform.position;
+        }
 
         if (WhichSize2 == 0)
         {
@@ -79,6 +86,12 @@ public class Manager : MonoBehaviour
             SecondPiece = Instantiate(TwoPieces[OneBlock2], SecondSpawn.transform);
             SecondPiece.GetComponent<TwoPiecesManager>().home = SecondSpawn.transform.position;
         }
+        if (WhichSize2 == 2)
+        {
+            int OneBlock2 = UnityEngine.Random.Range(0, ThreePieces.Length);
+            SecondPiece = Instantiate(ThreePieces[OneBlock2], SecondSpawn.transform);
+            SecondPiece.GetComponent<ThreePiecesManager>().home = SecondSpawn.transform.position;
+        }
 
         if (WhichSize3 == 0)
         {
@@ -91,6 +104,12 @@ public class Manager : MonoBehaviour
             int OneBlock3 = UnityEngine.Random.Range(0, TwoPieces.Length);
             ThirdPiece = Instantiate(TwoPieces[OneBlock3], ThirdSpawn.transform);
             ThirdPiece.GetComponent<TwoPiecesManager>().home = ThirdSpawn.transform.position;
+        }
+        if (WhichSize3 == 2)
+        {
+            int OneBlock3 = UnityEngine.Random.Range(0, ThreePieces.Length);
+            ThirdPiece = Instantiate(ThreePieces[OneBlock3], ThirdSpawn.transform);
+            ThirdPiece.GetComponent<ThreePiecesManager>().home = ThirdSpawn.transform.position;
         }
     }
 }
