@@ -24,6 +24,12 @@ public class OnePiece : MonoBehaviour
     int color;
     [SerializeField] Sprite blue,cyan,green,orange,purple,red,yellow;
     [SerializeField] Boolean atHome = true;
+
+
+    private void Start()
+    {
+        GetComponent<Transform>().localScale = new Vector3(0.435f, 0.435f, 0);
+    }
     private void Update()
     {
         if (!atHome)
@@ -103,7 +109,8 @@ public class OnePiece : MonoBehaviour
     }
     private void OnMouseDrag()
     {
-        if(this.gameObject.tag == "Blue")
+        GetComponent<Transform>().localScale = new Vector3(0.87f, 0.87f, 0);
+        if (this.gameObject.tag == "Blue")
         {
             color = 1;
         }
@@ -142,6 +149,7 @@ public class OnePiece : MonoBehaviour
         if (!isOkey)
         {
             turnBack = true;
+            GetComponent<Transform>().localScale = new Vector3(0.435f, 0.435f, 0);
         }
         if (isOkey)
         {
