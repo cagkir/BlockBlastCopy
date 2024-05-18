@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Manager : MonoBehaviour
@@ -16,8 +17,11 @@ public class Manager : MonoBehaviour
     [SerializeField] Boolean isFirstUsed, isSecondUsed, isThirdUsed;
     [SerializeField] GameObject firstPiece, SecondPiece, ThirdPiece;
     [SerializeField] GameObject firstSpawn, SecondSpawn, ThirdSpawn;
-    
 
+
+    [SerializeField] TextMeshProUGUI textMeshProUGUI;
+    public int points = 0;
+    public int level = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,9 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        textMeshProUGUI.text = "Points : " + points;
+
         if (isFirstUsed && isSecondUsed && isThirdUsed)
         {
             generateNewBlocks();
@@ -46,7 +53,29 @@ public class Manager : MonoBehaviour
             {
                 isThirdUsed = true;
             }
-        }  
+        }
+
+
+        if(points >= 150)
+        {
+            level = 2;
+        }
+        if (points >= 350)
+        {
+            level = 3;
+        }
+        if (points >= 600)
+        {
+            level = 4;
+        }
+        if (points >= 1000)
+        {
+            level = 5;
+        }
+        if (points >= 1500)
+        {
+            level = 6;
+        }
     }
 
     void generateNewBlocks()
@@ -54,9 +83,43 @@ public class Manager : MonoBehaviour
         isFirstUsed = false;
         isSecondUsed = false;
         isThirdUsed = false;
-        WhichSize1 = UnityEngine.Random.Range(0, 7);
-        WhichSize2 = UnityEngine.Random.Range(0, 7);
-        WhichSize3 = UnityEngine.Random.Range(0, 7);
+
+        if(level == 1)
+        {
+            WhichSize1 = UnityEngine.Random.Range(0, 2);
+            WhichSize2 = UnityEngine.Random.Range(0, 3);
+            WhichSize3 = UnityEngine.Random.Range(0, 2);
+        }
+        if (level == 2)
+        {
+            WhichSize1 = UnityEngine.Random.Range(0, 3);
+            WhichSize2 = UnityEngine.Random.Range(1, 3);
+            WhichSize3 = UnityEngine.Random.Range(0, 3);
+        }
+        if (level == 3)
+        {
+            WhichSize1 = UnityEngine.Random.Range(1, 4);
+            WhichSize2 = UnityEngine.Random.Range(0, 3);
+            WhichSize3 = UnityEngine.Random.Range(1, 4);
+        }
+        if (level == 4)
+        {
+            WhichSize1 = UnityEngine.Random.Range(1, 5);
+            WhichSize2 = UnityEngine.Random.Range(2, 4);
+            WhichSize3 = UnityEngine.Random.Range(2, 5);
+        }
+        if (level == 5)
+        {
+            WhichSize1 = UnityEngine.Random.Range(3, 6);
+            WhichSize2 = UnityEngine.Random.Range(1, 6);
+            WhichSize3 = UnityEngine.Random.Range(3, 5);
+        }
+        if (level == 6)
+        {
+            WhichSize1 = UnityEngine.Random.Range(0, 7);
+            WhichSize2 = UnityEngine.Random.Range(1, 7);
+            WhichSize3 = UnityEngine.Random.Range(0, 7);
+        }
 
         if (WhichSize1 == 0)
         {

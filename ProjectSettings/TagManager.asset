@@ -11,6 +11,7 @@ TagManager:
   - Purple
   - Red
   - Yellow
+  - Manager
   layers:
   - Default
   - TransparentFX

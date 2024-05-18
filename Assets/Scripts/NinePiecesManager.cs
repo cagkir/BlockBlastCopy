@@ -43,9 +43,12 @@ public class NinePiecesManager : MonoBehaviour
     [SerializeField] Boolean atHome = true;
 
 
+
+    GameObject Manager;
     private void Start()
     {
         GetComponent<Transform>().localScale = new Vector3(0.5f, 0.5f, 0);
+        Manager = GameObject.FindGameObjectWithTag("Manager");
     }
     private void Update()
     {
@@ -482,6 +485,7 @@ public class NinePiecesManager : MonoBehaviour
         if (isOkeyAll)
         {
             Thrown = true;
+            Manager.GetComponent<Manager>().points += 90;
             child1.transform.SetParent(raycastHitFirst.collider.gameObject.transform);
             child2.transform.SetParent(raycastHitSecond.collider.gameObject.transform);
             child3.transform.SetParent(raycastHitThird.collider.gameObject.transform);
