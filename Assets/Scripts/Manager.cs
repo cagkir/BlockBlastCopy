@@ -32,7 +32,7 @@ public class Manager : MonoBehaviour
     void Update()
     {
 
-        textMeshProUGUI.text = "Points : " + points;
+        textMeshProUGUI.text = points.ToString();
 
         if (isFirstUsed && isSecondUsed && isThirdUsed)
         {
