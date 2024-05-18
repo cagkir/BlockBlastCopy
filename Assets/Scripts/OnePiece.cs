@@ -161,6 +161,7 @@ public class OnePiece : MonoBehaviour
             transform.SetParent(raycastHit3D.collider.gameObject.transform);
             raycastHit3D.collider.gameObject.layer = 6;
             transform.localPosition = new Vector3(0, 0, -1);
+            GetComponent<BoxCollider2D>().enabled = false;
             Destroy(gameObject.GetComponent<OnePiece>());
         }
     }

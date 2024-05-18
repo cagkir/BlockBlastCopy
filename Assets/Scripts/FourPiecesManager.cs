@@ -298,7 +298,8 @@ public class FourPiecesManager : MonoBehaviour
             child2.transform.localPosition = new Vector3(0, 0, -1);
             child3.transform.localPosition = new Vector3(0, 0, -1);
             child4.transform.localPosition = new Vector3(0, 0, -1);
-            Destroy(gameObject.GetComponent<ThreePiecesManager>());
+            GetComponent<BoxCollider2D>().enabled = false;
+            Destroy(gameObject.GetComponent<FourPiecesManager>());
         }
     }
 
