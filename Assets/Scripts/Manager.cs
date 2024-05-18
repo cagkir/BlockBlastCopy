@@ -40,7 +40,7 @@ public class Manager : MonoBehaviour
             {
                 isSecondUsed = true;
             }
-            if ((WhichSize3 == 0 && !isThirdUsed && ThirdPiece.GetComponent<OnePiece>().Thrown) || (WhichSize3 == 1 && !isThirdUsed && ThirdPiece.GetComponent<TwoPiecesManager>().Thrown) || (WhichSize3 == 2 && !isThirdUsed && ThirdPiece.GetComponent<ThreePiecesManager>().Thrown) || (WhichSize3 == 3 && !isThirdUsed && ThirdPiece.GetComponent<FourPiecesManager>().Thrown) || (WhichSize3 == 4 && isThirdUsed && ThirdPiece.GetComponent<FivePiecesManager>().Thrown))
+            if ((WhichSize3 == 0 && !isThirdUsed && ThirdPiece.GetComponent<OnePiece>().Thrown) || (WhichSize3 == 1 && !isThirdUsed && ThirdPiece.GetComponent<TwoPiecesManager>().Thrown) || (WhichSize3 == 2 && !isThirdUsed && ThirdPiece.GetComponent<ThreePiecesManager>().Thrown) || (WhichSize3 == 3 && !isThirdUsed && ThirdPiece.GetComponent<FourPiecesManager>().Thrown) || (WhichSize3 == 4 && !isThirdUsed && ThirdPiece.GetComponent<FivePiecesManager>().Thrown))
             {
                 isThirdUsed = true;
             }

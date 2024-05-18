@@ -255,6 +255,7 @@ public class ThreePiecesManager : MonoBehaviour
             child1.transform.localPosition = new Vector3(0, 0, -1);
             child2.transform.localPosition = new Vector3(0, 0, -1);
             child3.transform.localPosition = new Vector3(0, 0, -1);
+            GetComponent<BoxCollider2D>().enabled = false;
             Destroy(gameObject.GetComponent<ThreePiecesManager>());
         }
     }
