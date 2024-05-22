@@ -35,7 +35,7 @@ public class ThreePiecesManager : MonoBehaviour
     GameObject LineManager;
     private void Start()
     {
-        //GetComponent<Transform>().localScale = new Vector3(1f, 1f, 0);
+        GetComponent<Transform>().localScale = new Vector3(0.5f, 0.5f, 0);
         Manager = GameObject.FindGameObjectWithTag("Manager");
         LineManager = GameObject.FindGameObjectWithTag("LineManager");
     }

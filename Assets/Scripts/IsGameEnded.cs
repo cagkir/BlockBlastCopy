@@ -69,6 +69,7 @@ public class IsGameEnded : MonoBehaviour
             {
                 //FIRST OBJECT
                 ToControl21 = false;
+                firstObj.transform.localScale = new Vector3(1, 1, 0);
                 if (firstObj.layer == 7)
                 {
                     foreach (var item in leftdiagonal2)
@@ -199,6 +200,7 @@ public class IsGameEnded : MonoBehaviour
             {
                 //SECOND OBJECT
                 ToControl22 = false;
+                secondObj.transform.localScale = new Vector3(1, 1, 0);
                 if (secondObj.layer == 7)
                 {
                     foreach (var item in leftdiagonal2)
@@ -330,6 +332,7 @@ public class IsGameEnded : MonoBehaviour
 
                 //THIRDOBJECT
                 ToControl23 = false;
+                thirdObj.transform.localScale = new Vector3(1, 1, 0);
                 if (thirdObj.layer == 7)
                 {
                     foreach (var item in leftdiagonal2)
