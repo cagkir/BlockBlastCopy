@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5033393803748147355}
   - component: {fileID: 3096559791652338363}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BlueBlock (1)
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8337143102033417962}
   - component: {fileID: 3347401615863145171}
   - component: {fileID: 2492663507726942590}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BlueSix
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3934201448145746351}
   - component: {fileID: 530426255783556118}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BlueBlock (5)
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2198679746666028660}
   - component: {fileID: 4567908081941737281}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BlueBlock (3)
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2454391101004571476}
   - component: {fileID: 8968808891259651350}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BlueBlock (4)
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614262794298446750}
   - component: {fileID: 4646855651033353076}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BlueBlock
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8910263561187181677}
   - component: {fileID: 2484036741905760994}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BlueBlock (2)
   m_TagString: Blue
   m_Icon: {fileID: 0}

@@ -12,6 +12,7 @@ TagManager:
   - Red
   - Yellow
   - Manager
+  - LineManager
   layers:
   - Default
   - TransparentFX
@@ -20,31 +21,31 @@ TagManager:
   - Water
   - UI
   - ClosedBox
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - leftdiagonal2
+  - rightdiagonal2
+  - straight2
+  - upward2
+  - leftdiagonal3
+  - upward5
+  - stairsdown3
+  - stairsleft3
+  - stairsright3
+  - stairsup3
+  - straight3
+  - upward3
+  - right6
+  - up6
+  - nine
+  - leftL4
+  - upL4
+  - downPlus4
+  - rightPlus4
+  - square4
+  - straight4
+  - upward4
+  - upZ4
+  - leftL5
+  - rightL5
   m_SortingLayers:
   - name: Default
     uniqueID: 0

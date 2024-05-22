@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1647536749851993784}
   - component: {fileID: 663544866078106802}
   - component: {fileID: 901191226300206743}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: BlueFour
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4115642013537315390}
   - component: {fileID: 6251219291327331961}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: BlueBlock
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5641567361662490957}
   - component: {fileID: 4497859974594918732}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: BlueBlock (3)
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2717573975942610953}
   - component: {fileID: 1804190645601013555}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: BlueBlock (2)
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3923431528503719217}
   - component: {fileID: 951358443705472275}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: BlueBlock (1)
   m_TagString: Blue
   m_Icon: {fileID: 0}

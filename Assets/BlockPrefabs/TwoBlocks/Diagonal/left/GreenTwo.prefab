@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2356839756089088818}
   - component: {fileID: 7716558253559362357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenBlock (1)
   m_TagString: Green
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3097159510959620973}
   - component: {fileID: 8389093846807653296}
   - component: {fileID: 8572816657807856909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenTwo
   m_TagString: Green
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7662182375183495740}
   - component: {fileID: 2649267169449221333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenBlock
   m_TagString: Green
   m_Icon: {fileID: 0}

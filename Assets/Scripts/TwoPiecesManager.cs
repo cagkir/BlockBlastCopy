@@ -19,10 +19,10 @@ public class TwoPiecesManager : MonoBehaviour
 
     [SerializeField] Boolean isOkeyFirst;
     [SerializeField] Boolean isOkeySecond;
-    [SerializeField] Boolean isOkeyBoth;
+    [SerializeField] public Boolean isOkeyBoth;
     [SerializeField] public Boolean Thrown;
-    [SerializeField] Boolean rayControl, turnBack;
-    [SerializeField] GameObject child1, child2;
+    [SerializeField] public Boolean rayControl, turnBack;
+    [SerializeField] public GameObject child1, child2;
 
     GameObject a1, b1, a2, b2;
     int color;
@@ -31,11 +31,13 @@ public class TwoPiecesManager : MonoBehaviour
 
 
     GameObject Manager;
+    GameObject LineManager;
 
     private void Start()
     {
-        GetComponent<Transform>().localScale = new Vector3(0.5f,0.5f,0);
+        //GetComponent<Transform>().localScale = new Vector3(0.5f,0.5f,0);
         Manager = GameObject.FindGameObjectWithTag("Manager");
+        LineManager = GameObject.FindGameObjectWithTag("LineManager");
     }
     private void Update()
     {
@@ -211,6 +213,7 @@ public class TwoPiecesManager : MonoBehaviour
         if (isOkeyBoth)
         {
             Thrown = true;
+            
             Manager.GetComponent<Manager>().points += 20;
             child1.transform.SetParent(raycastHitFirst.collider.gameObject.transform);
             child2.transform.SetParent(raycastHitSecond.collider.gameObject.transform);
@@ -219,7 +222,11 @@ public class TwoPiecesManager : MonoBehaviour
             child1.transform.localPosition = new Vector3(0, 0, -1);
             child2.transform.localPosition = new Vector3(0, 0, -1);
             GetComponent<BoxCollider2D>().enabled = false;
+
             Destroy(gameObject.GetComponent<TwoPiecesManager>());
+            Manager.GetComponent<Manager>().Generated = true;
+            LineManager.GetComponent<LineManager>().toScan = true;
+
         }
     }
 
