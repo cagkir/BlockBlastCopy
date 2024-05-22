@@ -65,23 +65,23 @@ public class Manager : MonoBehaviour
         }
 
 
-        if(points >= 150)
+        if(points >= 120)
         {
             level = 2;
         }
-        if (points >= 350)
+        if (points >= 300)
         {
             level = 3;
         }
-        if (points >= 600)
+        if (points >= 500)
         {
             level = 4;
         }
-        if (points >= 1000)
+        if (points >= 800)
         {
             level = 5;
         }
-        if (points >= 1500)
+        if (points >= 1100)
         {
             level = 6;
         }
@@ -97,19 +97,19 @@ public class Manager : MonoBehaviour
         if(level == 1)
         {
             WhichSize1 = UnityEngine.Random.Range(0, 2);
-            WhichSize2 = UnityEngine.Random.Range(0, 3);
+            WhichSize2 = UnityEngine.Random.Range(1, 3);
             WhichSize3 = UnityEngine.Random.Range(0, 2);
         }
         if (level == 2)
         {
-            WhichSize1 = UnityEngine.Random.Range(0, 3);
+            WhichSize1 = UnityEngine.Random.Range(1, 3);
             WhichSize2 = UnityEngine.Random.Range(1, 3);
             WhichSize3 = UnityEngine.Random.Range(0, 3);
         }
         if (level == 3)
         {
             WhichSize1 = UnityEngine.Random.Range(1, 4);
-            WhichSize2 = UnityEngine.Random.Range(0, 3);
+            WhichSize2 = UnityEngine.Random.Range(1, 3);
             WhichSize3 = UnityEngine.Random.Range(1, 4);
         }
         if (level == 4)
@@ -121,14 +121,14 @@ public class Manager : MonoBehaviour
         if (level == 5)
         {
             WhichSize1 = UnityEngine.Random.Range(3, 6);
-            WhichSize2 = UnityEngine.Random.Range(1, 6);
+            WhichSize2 = UnityEngine.Random.Range(2, 6);
             WhichSize3 = UnityEngine.Random.Range(3, 5);
         }
         if (level == 6)
         {
-            WhichSize1 = UnityEngine.Random.Range(0, 7);
-            WhichSize2 = UnityEngine.Random.Range(1, 7);
-            WhichSize3 = UnityEngine.Random.Range(0, 7);
+            WhichSize1 = UnityEngine.Random.Range(3, 7);
+            WhichSize2 = UnityEngine.Random.Range(2, 7);
+            WhichSize3 = UnityEngine.Random.Range(4, 7);
         }
 
         if (WhichSize1 == 0)
