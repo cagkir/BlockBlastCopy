@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Manager : MonoBehaviour
@@ -14,33 +15,41 @@ public class Manager : MonoBehaviour
     [SerializeField] GameObject[] FivePieces;
     [SerializeField] GameObject[] SixPieces;
     [SerializeField] GameObject[] NinePieces;
-    [SerializeField] Boolean isFirstUsed, isSecondUsed, isThirdUsed;
-    [SerializeField] GameObject firstPiece, SecondPiece, ThirdPiece;
-    [SerializeField] GameObject firstSpawn, SecondSpawn, ThirdSpawn;
+    [SerializeField] public Boolean isFirstUsed, isSecondUsed, isThirdUsed;
+    [SerializeField] public GameObject firstPiece, SecondPiece, ThirdPiece;
+    [SerializeField] public GameObject firstSpawn, SecondSpawn, ThirdSpawn;
+    public Boolean Generated = false;
+    public float timer = 0;
 
 
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
+    [SerializeField] TextMeshPro tmp;
     public int points = 0;
     public int level = 1;
     // Start is called before the first frame update
     void Start()
     {
         generateNewBlocks();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        textMeshProUGUI.text = points.ToString();
+        if (timer >= 0.1f)
+        {
+            Generated = false;
+            timer = 0;
+        }
+        tmp.text = points.ToString();
 
         if (isFirstUsed && isSecondUsed && isThirdUsed)
         {
             generateNewBlocks();
+            
         }
         else
         {
-            
             if ((WhichSize1 == 0 && !isFirstUsed && firstPiece.GetComponent<OnePiece>().Thrown) || (WhichSize1 == 1 && !isFirstUsed && firstPiece.GetComponent<TwoPiecesManager>().Thrown) || (WhichSize1 == 2 && !isFirstUsed && firstPiece.GetComponent<ThreePiecesManager>().Thrown) || (WhichSize1 == 3 && !isFirstUsed && firstPiece.GetComponent<FourPiecesManager>().Thrown) || (WhichSize1 == 4 && !isFirstUsed && firstPiece.GetComponent<FivePiecesManager>().Thrown) || (WhichSize1 == 5 && !isFirstUsed && firstPiece.GetComponent<SixPiecesManager>().Thrown) || (WhichSize1 == 6 && !isFirstUsed && firstPiece.GetComponent<NinePiecesManager>().Thrown))
             {
                 isFirstUsed = true;
@@ -80,6 +89,7 @@ public class Manager : MonoBehaviour
 
     void generateNewBlocks()
     {
+
         isFirstUsed = false;
         isSecondUsed = false;
         isThirdUsed = false;
@@ -254,5 +264,15 @@ public class Manager : MonoBehaviour
             ThirdPiece = Instantiate(NinePieces[OneBlock3], ThirdSpawn.transform);
             ThirdPiece.GetComponent<NinePiecesManager>().home = ThirdSpawn.transform.position;
         }
+        
     }
+
+    private void FixedUpdate()
+    {
+        if (Generated)
+        {
+            timer += Time.deltaTime;
+        }
+    }
+
 }

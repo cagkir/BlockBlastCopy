@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7059018223916958464}
   - component: {fileID: 2206805202460971665}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: CyanBlock
   m_TagString: Cyan
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899771680899333247}
   - component: {fileID: 5662428171349917982}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: CyanBlock (3)
   m_TagString: Cyan
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044738619007820393}
   - component: {fileID: 1444193101424933768}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: CyanBlock (2)
   m_TagString: Cyan
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9208625108109566413}
   - component: {fileID: 5777319189452956921}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: CyanBlock (1)
   m_TagString: Cyan
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 8583728185608222736}
   - component: {fileID: 8030971540571354326}
   - component: {fileID: 3013067904622005184}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: CyanFour
   m_TagString: Cyan
   m_Icon: {fileID: 0}

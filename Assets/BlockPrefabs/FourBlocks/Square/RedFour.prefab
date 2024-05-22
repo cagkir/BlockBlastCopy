@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8360154709910316502}
   - component: {fileID: 8382156811414911331}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: RedBlock (3)
   m_TagString: Red
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2727349603510875467}
   - component: {fileID: 3643634908852011444}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: RedBlock (1)
   m_TagString: Red
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3366989118650855202}
   - component: {fileID: 8079163063349503398}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: RedBlock
   m_TagString: Red
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 2266053959496427265}
   - component: {fileID: 2799661580793606160}
   - component: {fileID: 6114364358278708872}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: RedFour
   m_TagString: Red
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7491518459051740915}
   - component: {fileID: 3714964318010241726}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: RedBlock (2)
   m_TagString: Red
   m_Icon: {fileID: 0}

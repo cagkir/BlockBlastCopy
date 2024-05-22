@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4610658557276119588}
   - component: {fileID: 5702465395493412509}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: OrangeBlock (2)
   m_TagString: Orange
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1531765733794492828}
   - component: {fileID: 467556664153206434}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: OrangeBlock (1)
   m_TagString: Orange
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3300771228615830311}
   - component: {fileID: 9189442441355955496}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: OrangeBlock
   m_TagString: Orange
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 8620524583967941120}
   - component: {fileID: 5084194762663494401}
   - component: {fileID: 7546083513971278732}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: OrangeThree
   m_TagString: Orange
   m_Icon: {fileID: 0}

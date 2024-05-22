@@ -39,10 +39,12 @@ public class SixPiecesManager : MonoBehaviour
 
 
     GameObject Manager;
+    GameObject LineManager;
     private void Start()
     {
         GetComponent<Transform>().localScale = new Vector3(0.5f, 0.5f, 0);
         Manager = GameObject.FindGameObjectWithTag("Manager");
+        LineManager = GameObject.FindGameObjectWithTag("LineManager");
     }
     private void Update()
     {
@@ -369,6 +371,7 @@ public class SixPiecesManager : MonoBehaviour
         if (isOkeyAll)
         {
             Thrown = true;
+            
             Manager.GetComponent<Manager>().points += 60;
             child1.transform.SetParent(raycastHitFirst.collider.gameObject.transform);
             child2.transform.SetParent(raycastHitSecond.collider.gameObject.transform);
@@ -390,6 +393,8 @@ public class SixPiecesManager : MonoBehaviour
             child6.transform.localPosition = new Vector3(0, 0, -1);
             GetComponent<BoxCollider2D>().enabled = false;
             Destroy(gameObject.GetComponent<SixPiecesManager>());
+            Manager.GetComponent<Manager>().Generated = true;
+            LineManager.GetComponent<LineManager>().toScan = true;
         }
     }
 

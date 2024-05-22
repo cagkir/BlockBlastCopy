@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8064507753070532889}
   - component: {fileID: 2493254342601032538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PurpleBlock (1)
   m_TagString: Purple
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9156274025918929040}
   - component: {fileID: 241332814310447941}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PurpleBlock
   m_TagString: Purple
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7777091745841626120}
   - component: {fileID: 513842949432965589}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PurpleBlock (2)
   m_TagString: Purple
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 5962595855817986012}
   - component: {fileID: 3345224711954958609}
   - component: {fileID: 8093903871167800022}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PurpleThree
   m_TagString: Purple
   m_Icon: {fileID: 0}

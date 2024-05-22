@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8333635589326303267}
   - component: {fileID: 5248090973104717751}
   - component: {fileID: 8291374933472435771}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: YellowThree
   m_TagString: Yellow
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2921629751113689740}
   - component: {fileID: 4507096822311928629}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: YellowBlock (1)
   m_TagString: Yellow
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3997174433398162761}
   - component: {fileID: 557600451600270060}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: YellowBlock (2)
   m_TagString: Yellow
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1440292724160410840}
   - component: {fileID: 1952973323051801152}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: YellowBlock
   m_TagString: Yellow
   m_Icon: {fileID: 0}

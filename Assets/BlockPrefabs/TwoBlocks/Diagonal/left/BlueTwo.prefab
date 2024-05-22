@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2236343644241202346}
   - component: {fileID: 186465498009159614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueBlock (1)
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6645137676102511052}
   - component: {fileID: 8603421958927494800}
   - component: {fileID: 5485776952230829203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueTwo
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3091907141556642339}
   - component: {fileID: 1572765086004116059}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueBlock
   m_TagString: Blue
   m_Icon: {fileID: 0}
