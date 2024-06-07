@@ -49,6 +49,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow1 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row1)
                     {
                         ToDestroy(item1);
@@ -68,6 +219,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow2 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row2)
                     {
                         ToDestroy(item1);
@@ -87,6 +389,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow3 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row3)
                     {
                         ToDestroy(item1);
@@ -106,6 +559,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow4 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row4)
                     {
                         ToDestroy(item1);
@@ -125,6 +729,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow5 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row5)
                     {
                         ToDestroy(item1);
@@ -144,6 +899,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow6 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row6)
                     {
                         ToDestroy(item1);
@@ -163,6 +1069,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow7 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row7)
                     {
                         ToDestroy(item1);
@@ -182,6 +1239,157 @@ public class LineManager : MonoBehaviour
                 }
                 if (forrow8 == 8)
                 {
+                    foreach (var item3 in Column1)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn1 += 1;
+                        }
+                        else
+                        {
+                            forColumn1 = 0;
+                        }
+                        if (forColumn1 == 8)
+                        {
+                            foreach (var item1 in Column1)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column2)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn2 += 1;
+                        }
+                        else
+                        {
+                            forColumn2 = 0;
+                        }
+                        if (forColumn2 == 8)
+                        {
+                            foreach (var item1 in Column2)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column3)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn3 += 1;
+                        }
+                        else
+                        {
+                            forColumn3 = 0;
+                        }
+                        if (forColumn3 == 8)
+                        {
+                            foreach (var item1 in Column3)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column4)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn4 += 1;
+                        }
+                        else
+                        {
+                            forColumn4 = 0;
+                        }
+                        if (forColumn4 == 8)
+                        {
+                            foreach (var item1 in Column4)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column5)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn5 += 1;
+                        }
+                        else
+                        {
+                            forColumn5 = 0;
+                        }
+                        if (forColumn5 == 8)
+                        {
+                            foreach (var item1 in Column5)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column6)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn6 += 1;
+                        }
+                        else
+                        {
+                            forColumn6 = 0;
+                        }
+                        if (forColumn6 == 8)
+                        {
+                            foreach (var item1 in Column6)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column7)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn7 += 1;
+                        }
+                        else
+                        {
+                            forColumn7 = 0;
+                        }
+                        if (forColumn7 == 8)
+                        {
+                            foreach (var item1 in Column7)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
+
+                    foreach (var item3 in Column8)
+                    {
+                        if (item3.layer == 6)
+                        {
+                            forColumn8 += 1;
+                        }
+                        else
+                        {
+                            forColumn8 = 0;
+                        }
+                        if (forColumn8 == 8)
+                        {
+                            foreach (var item1 in Column8)
+                            {
+                                ToDestroy(item1);
+                            }
+                        }
+                    }
                     foreach (var item1 in Row8)
                     {
                         ToDestroy(item1);
@@ -351,9 +1559,12 @@ public class LineManager : MonoBehaviour
 
     void ToDestroy(GameObject DestroyObject)
     {
-        Destroy(DestroyObject.transform.GetChild(1).gameObject);
-        DestroyObject.gameObject.layer = 3;
-        DestroyObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+        if(DestroyObject.transform.childCount > 1)
+        {
+            Destroy(DestroyObject.transform.GetChild(1).gameObject);
+            DestroyObject.gameObject.layer = 3;
+            DestroyObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+        }  
         scandone = true;
         toScan = false;
     }

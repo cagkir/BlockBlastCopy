@@ -192,7 +192,7 @@ public class SixPiecesManager : MonoBehaviour
             if (Physics.Raycast(child6.transform.position, Vector3.forward, out raycastHitSixth, distance, lm))
             {
                 isOkeySixth = true;
-                b5 = raycastHitSixth.transform.gameObject;
+                b6 = raycastHitSixth.transform.gameObject;
 
                 if (a6 == null)
                 {
