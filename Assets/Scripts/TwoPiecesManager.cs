@@ -222,7 +222,6 @@ public class TwoPiecesManager : MonoBehaviour
             child1.transform.localPosition = new Vector3(0, 0, -1);
             child2.transform.localPosition = new Vector3(0, 0, -1);
             GetComponent<BoxCollider2D>().enabled = false;
-
             Destroy(gameObject.GetComponent<TwoPiecesManager>());
             Manager.GetComponent<Manager>().Generated = true;
             LineManager.GetComponent<LineManager>().toScan = true;

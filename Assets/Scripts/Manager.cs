@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -24,19 +25,20 @@ public class Manager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
     [SerializeField] TextMeshPro tmp;
+    [SerializeField] TextMeshPro BestScore;
     public int points = 0;
     public int level = 1;
     // Start is called before the first frame update
     void Start()
     {
         generateNewBlocks();
-        
+        BestScore.text = PlayerPrefs.GetInt("BestScore").ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer >= 0.1f)
+        if (timer >= 0.15f)
         {
             Generated = false;
             timer = 0;
@@ -96,32 +98,32 @@ public class Manager : MonoBehaviour
 
         if(level == 1)
         {
-            WhichSize1 = UnityEngine.Random.Range(0, 2);
-            WhichSize2 = UnityEngine.Random.Range(1, 3);
-            WhichSize3 = UnityEngine.Random.Range(0, 2);
+            WhichSize1 = UnityEngine.Random.Range(1, 4);
+            WhichSize2 = UnityEngine.Random.Range(3, 4);
+            WhichSize3 = UnityEngine.Random.Range(0, 4);
         }
         if (level == 2)
         {
-            WhichSize1 = UnityEngine.Random.Range(1, 3);
-            WhichSize2 = UnityEngine.Random.Range(1, 3);
-            WhichSize3 = UnityEngine.Random.Range(0, 3);
+            WhichSize1 = UnityEngine.Random.Range(1, 4);
+            WhichSize2 = UnityEngine.Random.Range(1, 4);
+            WhichSize3 = UnityEngine.Random.Range(0, 4);
         }
         if (level == 3)
         {
-            WhichSize1 = UnityEngine.Random.Range(1, 4);
+            WhichSize1 = UnityEngine.Random.Range(2, 4);
             WhichSize2 = UnityEngine.Random.Range(1, 3);
-            WhichSize3 = UnityEngine.Random.Range(1, 4);
+            WhichSize3 = UnityEngine.Random.Range(2, 5);
         }
         if (level == 4)
         {
-            WhichSize1 = UnityEngine.Random.Range(1, 5);
+            WhichSize1 = UnityEngine.Random.Range(1, 7);
             WhichSize2 = UnityEngine.Random.Range(2, 4);
-            WhichSize3 = UnityEngine.Random.Range(2, 5);
+            WhichSize3 = UnityEngine.Random.Range(3, 5);
         }
         if (level == 5)
         {
             WhichSize1 = UnityEngine.Random.Range(3, 6);
-            WhichSize2 = UnityEngine.Random.Range(2, 6);
+            WhichSize2 = UnityEngine.Random.Range(2, 7);
             WhichSize3 = UnityEngine.Random.Range(3, 5);
         }
         if (level == 6)
@@ -273,6 +275,11 @@ public class Manager : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
+    }
+
+    public void restart()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
