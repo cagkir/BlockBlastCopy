@@ -8,17 +8,10 @@ public class IsGameEnded : MonoBehaviour
 {
     public GameObject firstObj, secondObj, thirdObj;
 
-    [SerializeField] GameObject[] one;
-    [SerializeField] GameObject[] leftdiagonal2, rightdiagonal2, straight2, upward2;
-    [SerializeField] GameObject[] leftdiagonal3, rightdiagonal3, stairsdown3, stairsleft3, stairsright3, stairsup3, straight3, upward3;
-    [SerializeField] GameObject[] leftL4, upL4, downplus4, rightplus4, square4, straight4, upward4, upz4;
-    [SerializeField] GameObject[] leftL5, rightL5, upward5;
-    [SerializeField] GameObject[] right6, upward6;
-    [SerializeField] GameObject[] nine;
+
     [SerializeField] GameObject[] all;
     public LayerMask layerMask;
 
-    //int toControl11 = 0, toControl12 = 0, toControl13 = 0;
     int toControl21 = 0, toControl22 = 0, toControl23 = 0;
     int toControl31 = 0, toControl32 = 0, toControl33 = 0;
     int toControl41 = 0, toControl42 = 0, toControl43 = 0;
@@ -26,7 +19,6 @@ public class IsGameEnded : MonoBehaviour
     int toControl61 = 0, toControl62 = 0, toControl63 = 0;
     int toControl91 = 0, toControl92 = 0, toControl93 = 0;
 
-    Boolean ToControl11 = false, ToControl12 = false, ToControl13 = false;
     Boolean ToControl21 = false, ToControl22 = false, ToControl23 = false;
     Boolean ToControl31 = false, ToControl32 = false, ToControl33 = false;
     Boolean ToControl41 = false, ToControl42 = false, ToControl43 = false;
@@ -37,7 +29,7 @@ public class IsGameEnded : MonoBehaviour
     Boolean gameEnd1 = false, gameEnd2 = false, gameEnd3 = false;
     Boolean gameEndAll = false;
     float GameEnd = 0;
-    [SerializeField] GameObject loadUI;
+    [SerializeField] GameObject loadUI, loadUI2;
 
     public GameObject lineManager;
 
@@ -338,226 +330,27 @@ public class IsGameEnded : MonoBehaviour
                 //FIRST OBJECT
                 ToControl41 = false;
                 firstObj.transform.localScale = new Vector3(1, 1, 0);
-                if (firstObj.layer == 22)
+                foreach (var item in all)
                 {
-                    foreach (var item in leftL4)
+                    firstObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
+                    toControl41 = 0;
+                    for (int i = 0; i < firstObj.transform.childCount; i++)
                     {
-                        firstObj.transform.position = item.transform.position + new Vector3(0, 0.36f, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
+                        if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
                         {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
+                            if (hit.collider != null)
                             {
-                                if (hit.collider != null)
+                                //np
+                                toControl41 += 1;
+                                if (toControl41 == 4)
                                 {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
+                                    ToControl41 = true;
                                 }
                             }
-                        }
-                    }
-                }
-                if (firstObj.layer == 23)
-                {
-                    foreach (var item in upL4)
-                    {
-                        firstObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
+                            else
                             {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (firstObj.layer == 24)
-                {
-                    foreach (var item in downplus4)
-                    {
-                        firstObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (firstObj.layer == 25)
-                {
-                    foreach (var item in rightplus4)
-                    {
-                        firstObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (firstObj.layer == 26)
-                {
-                    foreach (var item in square4)
-                    {
-                        firstObj.transform.position = item.transform.position + new Vector3(-0.36f, -0.36f, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (firstObj.layer == 27)
-                {
-                    foreach (var item in straight4)
-                    {
-                        firstObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (firstObj.layer == 28)
-                {
-                    foreach (var item in upward4)
-                    {
-                        firstObj.transform.position = item.transform.position + new Vector3(0, -0.36f, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (firstObj.layer == 29)
-                {
-                    foreach (var item in upz4)
-                    {
-                        firstObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl41 = 0;
-                        for (int i = 0; i < firstObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(firstObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl41 += 1;
-                                    if (toControl41 == 4)
-                                    {
-                                        ToControl41 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
+                                //problem
+                                break;
                             }
                         }
                     }
@@ -581,226 +374,27 @@ public class IsGameEnded : MonoBehaviour
                 //SECOND OBJECT
                 ToControl42 = false;
                 secondObj.transform.localScale = new Vector3(1, 1, 0);
-                if (secondObj.layer == 22)
+                foreach (var item in all)
                 {
-                    foreach (var item in leftL4)
+                    secondObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
+                    toControl42 = 0;
+                    for (int i = 0; i < secondObj.transform.childCount; i++)
                     {
-                        secondObj.transform.position = item.transform.position + new Vector3(0, 0.36f, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
+                        if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
                         {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
+                            if (hit.collider != null)
                             {
-                                if (hit.collider != null)
+                                //np
+                                toControl42 += 1;
+                                if (toControl42 == 4)
                                 {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
+                                    ToControl42 = true;
                                 }
                             }
-                        }
-                    }
-                }
-                if (secondObj.layer == 23)
-                {
-                    foreach (var item in upL4)
-                    {
-                        secondObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
+                            else
                             {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (secondObj.layer == 24)
-                {
-                    foreach (var item in downplus4)
-                    {
-                        secondObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (secondObj.layer == 25)
-                {
-                    foreach (var item in rightplus4)
-                    {
-                        secondObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (secondObj.layer == 26)
-                {
-                    foreach (var item in square4)
-                    {
-                        secondObj.transform.position = item.transform.position + new Vector3(-0.36f, -0.36f, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (secondObj.layer == 27)
-                {
-                    foreach (var item in straight4)
-                    {
-                        secondObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (secondObj.layer == 28)
-                {
-                    foreach (var item in upward4)
-                    {
-                        secondObj.transform.position = item.transform.position + new Vector3(0, -0.36f, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (secondObj.layer == 29)
-                {
-                    foreach (var item in upz4)
-                    {
-                        secondObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl42 = 0;
-                        for (int i = 0; i < secondObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(secondObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl42 += 1;
-                                    if (toControl42 == 4)
-                                    {
-                                        ToControl42 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
+                                //problem
+                                break;
                             }
                         }
                     }
@@ -824,226 +418,27 @@ public class IsGameEnded : MonoBehaviour
                 //THIRD OBJECT
                 ToControl43 = false;
                 thirdObj.transform.localScale = new Vector3(1, 1, 0);
-                if (thirdObj.layer == 22)
+                foreach (var item in all)
                 {
-                    foreach (var item in leftL4)
+                    thirdObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
+                    toControl43 = 0;
+                    for (int i = 0; i < thirdObj.transform.childCount; i++)
                     {
-                        thirdObj.transform.position = item.transform.position + new Vector3(0, 0.36f, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
+                        if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
                         {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
+                            if (hit.collider != null)
                             {
-                                if (hit.collider != null)
+                                //np
+                                toControl43 += 1;
+                                if (toControl43 == 4)
                                 {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
+                                    ToControl43 = true;
                                 }
                             }
-                        }
-                    }
-                }
-                if (thirdObj.layer == 23)
-                {
-                    foreach (var item in upL4)
-                    {
-                        thirdObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
+                            else
                             {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (thirdObj.layer == 24)
-                {
-                    foreach (var item in downplus4)
-                    {
-                        thirdObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (thirdObj.layer == 25)
-                {
-                    foreach (var item in rightplus4)
-                    {
-                        thirdObj.transform.position = item.transform.position + new Vector3(0, 0, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (thirdObj.layer == 26)
-                {
-                    foreach (var item in square4)
-                    {
-                        thirdObj.transform.position = item.transform.position + new Vector3(-0.36f, -0.36f, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (thirdObj.layer == 27)
-                {
-                    foreach (var item in straight4)
-                    {
-                        thirdObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (thirdObj.layer == 28)
-                {
-                    foreach (var item in upward4)
-                    {
-                        thirdObj.transform.position = item.transform.position + new Vector3(0, -0.36f, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (thirdObj.layer == 29)
-                {
-                    foreach (var item in upz4)
-                    {
-                        thirdObj.transform.position = item.transform.position + new Vector3(0.36f, 0, -1);
-                        toControl43 = 0;
-                        for (int i = 0; i < thirdObj.transform.childCount; i++)
-                        {
-                            if (Physics.Raycast(thirdObj.transform.GetChild(i).transform.position, Vector3.forward, out RaycastHit hit, 5f, layerMask))
-                            {
-                                if (hit.collider != null)
-                                {
-                                    //np
-                                    toControl43 += 1;
-                                    if (toControl43 == 4)
-                                    {
-                                        ToControl43 = true;
-                                    }
-                                }
-                                else
-                                {
-                                    //problem
-                                    break;
-                                }
+                                //problem
+                                break;
                             }
                         }
                     }
@@ -1562,8 +957,12 @@ public class IsGameEnded : MonoBehaviour
             if(PlayerPrefs.GetInt("BestScore") < GetComponent<Manager>().points)
             {
                 PlayerPrefs.SetInt("BestScore", GetComponent<Manager>().points);
+                loadUI2.SetActive(true);
             }
-            loadUI.SetActive(true);
+            else
+            {
+                loadUI.SetActive(true);
+            }
         }
     }
 
