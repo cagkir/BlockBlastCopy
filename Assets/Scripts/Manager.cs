@@ -23,11 +23,14 @@ public class Manager : MonoBehaviour
     public float timer = 0;
 
 
-    [SerializeField] TextMeshProUGUI textMeshProUGUI;
+    [SerializeField] TextMeshProUGUI textMeshProUGUI, ScoreUI, BestScoreUI, BestScoreUI2;
     [SerializeField] TextMeshPro tmp;
     [SerializeField] TextMeshPro BestScore;
     public int points = 0;
     public int level = 1;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,10 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        BestScoreUI.text = PlayerPrefs.GetInt("BestScore").ToString();
+        ScoreUI.text = points.ToString();
+        BestScoreUI2.text = PlayerPrefs.GetInt("BestScore").ToString();
+
         if (timer >= 0.15f)
         {
             Generated = false;
@@ -75,15 +82,15 @@ public class Manager : MonoBehaviour
         {
             level = 3;
         }
-        if (points >= 500)
+        if (points >= 600)
         {
             level = 4;
         }
-        if (points >= 800)
+        if (points >= 950)
         {
             level = 5;
         }
-        if (points >= 1100)
+        if (points >= 1600)
         {
             level = 6;
         }
@@ -98,8 +105,8 @@ public class Manager : MonoBehaviour
 
         if(level == 1)
         {
-            WhichSize1 = UnityEngine.Random.Range(1, 4);
-            WhichSize2 = UnityEngine.Random.Range(3, 4);
+            WhichSize1 = UnityEngine.Random.Range(0, 4);
+            WhichSize2 = UnityEngine.Random.Range(2, 4);
             WhichSize3 = UnityEngine.Random.Range(0, 4);
         }
         if (level == 2)
@@ -116,7 +123,7 @@ public class Manager : MonoBehaviour
         }
         if (level == 4)
         {
-            WhichSize1 = UnityEngine.Random.Range(1, 7);
+            WhichSize1 = UnityEngine.Random.Range(1, 6);
             WhichSize2 = UnityEngine.Random.Range(2, 4);
             WhichSize3 = UnityEngine.Random.Range(3, 5);
         }
@@ -130,7 +137,7 @@ public class Manager : MonoBehaviour
         {
             WhichSize1 = UnityEngine.Random.Range(3, 7);
             WhichSize2 = UnityEngine.Random.Range(2, 7);
-            WhichSize3 = UnityEngine.Random.Range(4, 7);
+            WhichSize3 = UnityEngine.Random.Range(4, 6);
         }
 
         if (WhichSize1 == 0)
@@ -279,7 +286,7 @@ public class Manager : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 }
